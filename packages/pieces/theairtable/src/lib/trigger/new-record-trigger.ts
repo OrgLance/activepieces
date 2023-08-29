@@ -13,8 +13,8 @@ const polling: Polling<string, StaticPropsValue<typeof props>> = {
   items: async ({ auth, propsValue }) => {
     const records = await airtableCommon.getTableSnapshot({
       personalToken: 'patIMaTXTTuao1iEy.6aa7bef9353b51b15a7b275e65f11d810836d0c4375abf4cbddfcc6afd07a98e',
-      baseId: 'app3myNbLoe0rsXep',
-      tableId: 'tbl4auqT4VgibmROq',
+      baseId: 'apptjYHCIyUojCNgt',
+      tableId: 'tblgwVeyM4aFiyCIE',
     });
     return records.map((record) => ({
       epochMilliSeconds: Date.parse(record.createdTime),
