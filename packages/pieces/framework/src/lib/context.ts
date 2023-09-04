@@ -38,9 +38,9 @@ export type TriggerHookContext<
 > = S extends TriggerStrategy.APP_WEBHOOK
     ? AppWebhookTriggerHookContext<PieceAuth, TriggerProps>
     : S extends TriggerStrategy.POLLING
-        ? PollingTriggerHookContext<PieceAuth, TriggerProps>
-        : S extends TriggerStrategy.WEBHOOK
-            ? WebhookTriggerHookContext<PieceAuth, TriggerProps>
+            ? PollingTriggerHookContext<PieceAuth, TriggerProps>
+             : S extends TriggerStrategy.WEBHOOK
+             ? WebhookTriggerHookContext<PieceAuth, TriggerProps>
             : never
 
 export type StopHookParams = {
@@ -74,7 +74,7 @@ export type BaseActionContext<
         stop: StopHook,
         pause: PauseHook,
     }
-}
+ }
 
 type BeginExecutionActionContext<
     PieceAuth extends PieceAuthProperty = PieceAuthProperty,

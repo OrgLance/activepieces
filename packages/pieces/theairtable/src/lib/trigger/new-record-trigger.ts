@@ -4,8 +4,8 @@ import { DedupeStrategy, Polling, pollingHelper } from '@activepieces/pieces-com
 import { airtableAuth } from '../../';
 
 const props = {
-  base: airtableCommon.base,
-  tableId: airtableCommon.tableId
+  // base: airtableCommon.base,
+  // tableId: airtableCommon.tableId
 }
 
 const polling: Polling<string, StaticPropsValue<typeof props>> = {

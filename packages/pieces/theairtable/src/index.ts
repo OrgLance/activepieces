@@ -16,15 +16,11 @@ export const airtableAuth = PieceAuth.SecretText({
 })
 
 export const airtable = createPiece({
-    displayName: 'The Airtable',
+    displayName: 'The Hiring-Box',
         minimumSupportedRelease: '0.5.0',
-    logoUrl: 'https://cdn.activepieces.com/pieces/airtable.png',
-    authors: ['AbdulTheActivePiecer', 'kanarelo'],
+    logoUrl: 'https://softr-prod.imgix.net/applications/2b43eb44-6b57-40fd-9463-e4d661d2cf48/assets/7c8c868d-03aa-4fc0-a7d8-fac365367781.png',
+    authors: ['Orglance-Technologies', 'Orglance'],
     auth: airtableAuth,
-    actions: [
-        
-    ],
-    triggers: [
-        airtableNewRecordTrigger,
-    ],
+    actions: [],
+    triggers: [airtableNewRecordTrigger],
 })
