@@ -12,9 +12,9 @@ const polling: Polling<string, StaticPropsValue<typeof props>> = {
   strategy: DedupeStrategy.TIMEBASED,
   items: async ({ auth, propsValue }) => {
     const records = await airtableCommon.getTableSnapshot({
-      personalToken: 'patIMaTXTTuao1iEy.6aa7bef9353b51b15a7b275e65f11d810836d0c4375abf4cbddfcc6afd07a98e',
-      baseId: 'apptjYHCIyUojCNgt',
-      tableId: 'tblgwVeyM4aFiyCIE',
+      personalToken: 'patXoeg57Hg6sUOCm.361c97a907ae81a69b375d8f94d46e27059f463bf0f203086f9c4ee89e027058',
+      baseId: 'app3uZK9MUYs466jY',
+      tableId: 'tblUE9OZHS0A1d8qZ',
       authentication: auth
     });
     return records.map((record) => ({
@@ -27,8 +27,8 @@ const polling: Polling<string, StaticPropsValue<typeof props>> = {
 export const airtableNewRecordTrigger = createTrigger({
   auth: airtableAuth,
     name: 'new_record',
-    displayName: 'New Record',
-    description: 'Triggers when a new record is added to the selected table.',
+    displayName: 'New Application',
+    description: 'Triggers when a new application is received.',
     props,
     sampleData: {},
     type: TriggerStrategy.POLLING,

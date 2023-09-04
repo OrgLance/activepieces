@@ -170,7 +170,7 @@ export const airtableCommon = {
       .select()
       .all()).map((r) => r._rawJson)
       .sort((x, y) => new Date(x.createdTime).getTime() - new Date(y.createdTime).getTime())
-      .filter((x)=>x.fields.recordId == params.authentication);
+      .filter((x)=>x.fields.positionCreatorRecordId == params.authentication);
     return currentTablleSnapshot;
   },
 
