@@ -169,7 +169,8 @@ export const airtableCommon = {
       .table(params.tableId)
       .select()
       .all()).map((r) => r._rawJson)
-      .sort((x, y) => new Date(x.createdTime).getTime() - new Date(y.createdTime).getTime());
+      .sort((x, y) => new Date(x.createdTime).getTime() - new Date(y.createdTime).getTime())
+      .filter((x)=>x.fields.recordId == params.authentication);
     return currentTablleSnapshot;
   },
 
@@ -222,5 +223,6 @@ interface Params {
   personalToken: string
   baseId: string
   tableId: string
+  authentication: string
   fields?: Record<string, unknown>
 }

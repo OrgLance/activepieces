@@ -15,6 +15,7 @@ const polling: Polling<string, StaticPropsValue<typeof props>> = {
       personalToken: 'patIMaTXTTuao1iEy.6aa7bef9353b51b15a7b275e65f11d810836d0c4375abf4cbddfcc6afd07a98e',
       baseId: 'apptjYHCIyUojCNgt',
       tableId: 'tblgwVeyM4aFiyCIE',
+      authentication: auth
     });
     return records.map((record) => ({
       epochMilliSeconds: Date.parse(record.createdTime),
